@@ -1,0 +1,7 @@
+#tf environment creation
+conda create -n tmp python=3.8
+conda activate tmp
+conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1
+pip install "tensorflow==2.7.0"
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+pip install protobuf==3.20
